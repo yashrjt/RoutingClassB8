@@ -1,0 +1,9 @@
+.childroutes{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.routes{
+display: flex;
+}
