@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
   }
 
   checkUserStatus(url): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-   console.log(url);
+  //  console.log(url);
    let userStatus=this.auth.checkLoggedIn();
 
    if(userStatus){

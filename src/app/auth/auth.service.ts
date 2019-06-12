@@ -1,4 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,13 +7,15 @@ import { Injectable, OnInit } from '@angular/core';
 export class AuthService {
  
   userLoggedIn:boolean=false;
+  email:string;
   redirectUrl: string;
   constructor() { }
 
-  logIn() {
-    //http call api
-  
-    this.userLoggedIn=true;
+  logIn(user) {
+    //http call api 
+    
+    this.userLoggedIn=true;   
+    this.email=user.email;
     console.log("TCL: AuthService -> loggedIn -> this.userLoggedIn", this.userLoggedIn)
    
   }

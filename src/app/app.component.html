@@ -2,8 +2,15 @@
   <a class="nav-link " routerLink="/home" routerLinkActive="active">Home</a>
   <a class="nav-link" routerLink="/doctors" routerLinkActive="active">Doctor</a>
   <a class="nav-link" routerLink="/patients" routerLinkActive="active">Patient</a>
-  <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-  <a class="nav-link"  routerLink="/register" routerLinkActive="active">Register</a>
+  <ng-container *ngIf="!loginStatus">
+    <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+    <a class="nav-link"  routerLink="/register" routerLinkActive="active">Register</a>       
+  </ng-container>
+  
+  <ng-container *ngIf="loginStatus">
+  <p class="nav-link"   routerLinkActive="active">Welcome {{email}}</p>
+  <a class="nav-link"  class="logout" (click)="logout()" routerLinkActive="active">Logout</a>
+</ng-container>
 </nav>
 
 <router-outlet></router-outlet>
