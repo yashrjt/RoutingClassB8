@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AuthModule } from './auth/auth.module';
 
 import { DoctorModule } from './doctor/doctor.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,9 @@ import { DoctorModule } from './doctor/doctor.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-     AuthModule,   
-    DoctorModule
+    AuthModule,   
+    DoctorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
